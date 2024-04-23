@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtcvuh4ctahmd"]
+
+[ext_resource type="Theme" uid="uid://ba60m4xd83i" path="res://assets/default.tres" id="1_8wcaj"]
+[ext_resource type="Script" path="res://escenas/UI/ui_puntos.gd" id="1_o2x8l"]
+
+[node name="UIPuntos" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_8wcaj")
+script = ExtResource("1_o2x8l")

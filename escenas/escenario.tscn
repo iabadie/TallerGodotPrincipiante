@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://fqmcgcw1fpdk"]
+
+[ext_resource type="Script" path="res://escenas/escenario.gd" id="1_5fq2t"]
+[ext_resource type="PackedScene" uid="uid://cw3etygfxqbr2" path="res://escenas/meteoro/meteoro.tscn" id="1_esepp"]
+[ext_resource type="Texture2D" uid="uid://di1esde63uwna" path="res://assets/backgrounds/darkPurple.png" id="1_q8kk4"]
+[ext_resource type="PackedScene" uid="uid://dgpphl73xfcnn" path="res://escenas/player/player.tscn" id="2_7ypr7"]
+[ext_resource type="PackedScene" uid="uid://b86cub5ck4gay" path="res://escenas/UI/ui_vida.tscn" id="3_mkjmm"]
+[ext_resource type="PackedScene" uid="uid://ol62vkf0xhck" path="res://escenas/info_partida/modal_info_partida.tscn" id="3_pbbcd"]
+[ext_resource type="PackedScene" uid="uid://dtcvuh4ctahmd" path="res://escenas/UI/ui_puntos.tscn" id="4_x5njj"]
+[ext_resource type="PackedScene" uid="uid://b8q0vxere1s78" path="res://escenas/coin/coin.tscn" id="8_w35np"]
+
+[node name="Escenario" type="Node2D" groups=["sistema"]]
+script = ExtResource("1_5fq2t")
+
+[node name="CanvaBackground" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Fondo" type="TextureRect" parent="CanvaBackground"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q8kk4")
+
+[node name="CanvasUI" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="UIVida" parent="CanvasUI" instance=ExtResource("3_mkjmm")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 155.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="UIPuntos" parent="CanvasUI" instance=ExtResource("4_x5njj")]
+offset_top = 130.0
+offset_right = 155.0
+offset_bottom = 185.0
+text = "Puntos: "
+
+[node name="ModalInfoPartida" parent="CanvasUI" instance=ExtResource("3_pbbcd")]
+visible = false
+
+[node name="Meteoro" parent="." instance=ExtResource("1_esepp")]
+position = Vector2(303, 512)
+DIRECCION = -90.0
+VELOCIDAD = 20.0
+
+[node name="Meteoro2" parent="." instance=ExtResource("1_esepp")]
+position = Vector2(499, 799)
+DIRECCION = -70.0
+VELOCIDAD = 60.0
+
+[node name="Meteoro3" parent="." instance=ExtResource("1_esepp")]
+position = Vector2(183, 810)
+DIRECCION = -90.0
+VELOCIDAD = 20.0
+
+[node name="Player" parent="." instance=ExtResource("2_7ypr7")]
+position = Vector2(324, 239)
+
+[node name="Coin" parent="." instance=ExtResource("8_w35np")]
+position = Vector2(146, 407)
+puntos = 20
+
+[node name="Coin2" parent="." instance=ExtResource("8_w35np")]
+position = Vector2(555, 570)
+
+[node name="Coin3" parent="." instance=ExtResource("8_w35np")]
+position = Vector2(335, 728)

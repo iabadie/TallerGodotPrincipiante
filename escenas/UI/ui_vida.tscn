@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://b86cub5ck4gay"]
+
+[ext_resource type="Script" path="res://escenas/UI/ui_vida.gd" id="1_5u145"]
+[ext_resource type="Theme" uid="uid://ba60m4xd83i" path="res://assets/default.tres" id="1_wxtbx"]
+[ext_resource type="Texture2D" uid="uid://bhe4c0eb43o6q" path="res://assets/personajes/shipBeige_manned.png" id="2_h0c8f"]
+
+[node name="UIVida" type="Control" groups=["personaje"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1102.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme = ExtResource("1_wxtbx")
+script = ExtResource("1_5u145")
+personaje = ExtResource("2_h0c8f")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+offset_right = 366.0
+offset_bottom = 122.0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "VIDA: "
+
+[node name="VidasContainer" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VidasContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_h0c8f")
+expand_mode = 1
