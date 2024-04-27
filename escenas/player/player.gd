@@ -52,3 +52,6 @@ func _on_area_2d_area_entered(area):
 
 func fin_partida():
 	puede_moverse = false
+
+func ganar():
+	puede_moverse = false

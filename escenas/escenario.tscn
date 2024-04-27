@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://fqmcgcw1fpdk"]
+[gd_scene load_steps=10 format=3 uid="uid://fqmcgcw1fpdk"]
 
 [ext_resource type="Script" path="res://escenas/escenario.gd" id="1_5fq2t"]
 [ext_resource type="PackedScene" uid="uid://cw3etygfxqbr2" path="res://escenas/meteoro/meteoro.tscn" id="1_esepp"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ol62vkf0xhck" path="res://escenas/info_partida/modal_info_partida.tscn" id="3_pbbcd"]
 [ext_resource type="PackedScene" uid="uid://dtcvuh4ctahmd" path="res://escenas/UI/ui_puntos.tscn" id="4_x5njj"]
 [ext_resource type="PackedScene" uid="uid://b8q0vxere1s78" path="res://escenas/coin/coin.tscn" id="8_w35np"]
+[ext_resource type="PackedScene" uid="uid://dhbwvbty4py86" path="res://escenas/meteoro/generador_de_asteroides.tscn" id="9_ykgd8"]
 
 [node name="Escenario" type="Node2D" groups=["sistema"]]
 script = ExtResource("1_5fq2t")
@@ -71,3 +72,6 @@ position = Vector2(555, 570)
 
 [node name="Coin3" parent="." instance=ExtResource("8_w35np")]
 position = Vector2(335, 728)
+
+[node name="GeneradorDeAsteroides" parent="." instance=ExtResource("9_ykgd8")]
+position = Vector2(113, 1008)

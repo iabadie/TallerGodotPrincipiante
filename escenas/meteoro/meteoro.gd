@@ -14,3 +14,7 @@ func _on_area_2d_area_entered(area):
 func fin_partida():
 	DIRECCION = 0;
 	VELOCIDAD = 0;
+
+func ganar():
+	DIRECCION = 0;
+	VELOCIDAD = 0;

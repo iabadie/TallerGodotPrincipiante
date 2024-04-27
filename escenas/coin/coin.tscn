@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hf6nx"]
 radius = 117.346
 
-[node name="Coin" type="Sprite2D"]
+[node name="Coin" type="Sprite2D" groups=["sistema"]]
 scale = Vector2(0.230088, 0.230088)
 texture = ExtResource("1_w8e7u")
 script = ExtResource("2_kfm4j")
